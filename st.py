@@ -5,7 +5,7 @@ import pandas as pd
 st.markdown("# keywordsraech")
 
 #input your xlsx path
-df = pd.read_excel("/Users/qizhihan/Desktop/py2/test.xlsx", engine='openpyxl')
+df = pd.read_excel("test.xlsx", engine='openpyxl')
 
 #アイテムの選択を作る
 keyword= df['keyword'].unique().tolist()
