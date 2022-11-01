@@ -13,3 +13,4 @@ google-resumable-media==2.4.0
 googleapis-common-protos==1.55.0
 googletransx==2.4.2
 google-cloud-storage==2.5.0
+gsheetsdb==0.1.13.1
