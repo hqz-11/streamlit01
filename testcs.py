@@ -24,8 +24,8 @@ file_path = "test.xlsx"
 df = read_file(bucket_name, file_path)
 
 # Print results.
-keyword= df['keyword'].unique().tolist()
-mondai = df['問題'].unique().tolist()
+keyword= df['keyword'].strip().split()
+mondai = df['問題'].strip().split()
 k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
 m_select = st.sidebar.selectbox("問題を選択してください", mondai)
 result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
