@@ -19,8 +19,8 @@ def read_file(bucket_name, file_path):
     content = bucket.blob(file_path).download_as_string().decode("utf-8")
     return content
 
-bucket_name = "streamlit-bucket"
-file_path = "myfile.csv"
+bucket_name = "streamlit-kann"
+file_path = "test.xlsx"
 
 df = read_file(bucket_name, file_path)
 st.markdown("# keywordsraech")
