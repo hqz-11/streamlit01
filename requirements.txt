@@ -11,4 +11,4 @@ google-pasta==0.1.8
 google-resumable-media==2.3.0
 googleapis-common-protos==1.55.0
 googletransx==2.4.2
-google-cloud-storage==2.3.2
+google-cloud-storage==2.5.0
