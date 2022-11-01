@@ -3,7 +3,7 @@
 import streamlit as st
 from google.oauth2 import service_account
 from google.cloud import storage
-
+import pandas as pd
 # Create API client.
 credentials = service_account.Credentials.from_service_account_info(
     st.secrets["gcp_service_account"]
@@ -21,7 +21,8 @@ def read_file(bucket_name, file_path):
 bucket_name = "streamlit-kann"
 file_path = "test.xlsx"
 
-df = read_file(bucket_name, file_path)
+content = read_file(bucket_name, file_path)
+df = pd.read_excel(content, engine='openpyxl')
 
 # Print results.
 keyword= df["keyword"]
