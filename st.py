@@ -5,7 +5,6 @@ import pandas as pd
 
 # Create API client.
 
-df = read_file(bucket_name, file_path)
 st.markdown("# keywordsraech")
 
 #input your xlsx path
