@@ -57,6 +57,6 @@ if check_password():
     else:
         st.write("答えの例： ")
         for i in range(len(result_df)):
-            st.write("例１",result_df["チャットボットの回答（高橋様修正後）"].values[i])
+            st.write("例１:",result_df["チャットボットの回答（高橋様修正後）"].values[i])
             #st.write(result_df["チャットボットの回答（修正前）"].values[i])
             #st.write(result_df["答え3"].values[i]) 
