@@ -15,6 +15,7 @@ SP_SHEET = 'Sheet1'
 worksheet = sh.worksheet(SP_SHEET)
 data = worksheet.get_all_values() 
 df = pd.DataFrame(data[1:], columns=data[0])
+
 def check_password():
     """Returns `True` if the user had the correct password."""
 
@@ -37,13 +38,14 @@ def check_password():
         st.text_input(
             "Password", type="password", on_change=password_entered, key="password"
         )
-        st.error("😕 Password incorrect")
+        st.error("パスワードが違う")
         return False
     else:
         # Password correct.
         return True
 
 if check_password():
+    st.markdown("# keywordsraech")
     keyword= df['keyword'].unique().tolist()
     mondai = df['問題'].unique().tolist()
     k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
