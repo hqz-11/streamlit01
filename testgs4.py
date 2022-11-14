@@ -49,14 +49,14 @@ if check_password():
         b1="Sheet2"
         c1="Sheet3"
         if a:
-            a1
+            return 'Sheet1'
         elif b:
-            b1
+            return 'Sheet2'
         elif c:
-            c1
+            return 'Sheet3'
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY)
-    SP_SHEET = str(test) 
+    SP_SHEET = test 
     worksheet = sh.worksheet(SP_SHEET)
     data = worksheet.get_all_values() 
     df = pd.DataFrame(data[1:], columns=data[0])
