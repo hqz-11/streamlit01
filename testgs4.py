@@ -95,6 +95,8 @@ if check_password():
         title2 = st.text_input("内容","内容")
         d=st.button("update")
         if d:
+            SP_SHEET = 'Sheet3' 
+            worksheet = sh.worksheet(SP_SHEET)
             worksheet.update_cell(16, 1, "title2")
         
             
