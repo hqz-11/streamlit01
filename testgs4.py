@@ -41,6 +41,7 @@ def check_password():
 
 
 if check_password():
+    st.title("# keywordsearch")
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY) 
     SP_SHEET = 'Sheet1'
@@ -63,8 +64,8 @@ if check_password():
             
             
             
-    st.title("# sheet update"
-             st.header('https://hqz-11-streamlit01-update-hztko3.streamlit.app/'))
+    st.title("# sheet update")
+    st.header('https://hqz-11-streamlit01-update-hztko3.streamlit.app/')
     
         
             
