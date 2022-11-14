@@ -41,19 +41,6 @@ def check_password():
 
 
 if check_password():
-    SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
-    sh = gc.open_by_key(SP_SHEET_KEY)
-    SP_SHEET = 'Sheet3' 
-    worksheet = sh.worksheet(SP_SHEET)
-    list = worksheet.get_all_values()
-    x1=len(list)
-    x2=x1+1
-    title1 = st.text_input("行",1)
-    title2 = st.text_input("内容","内容")
-    d=st.button("update")
-    if d:
-        add1 = worksheet.update_cell(x2,title1,title2)
-    
     SP_SHEET = 'Sheet1'
     worksheet = sh.worksheet(SP_SHEET)
     data = worksheet.get_all_values() 
