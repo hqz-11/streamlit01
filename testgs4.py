@@ -86,9 +86,11 @@ if check_password():
                 st.write(result_df["答え2"].values[i])
                 st.write(result_df["答え3"].values[i]) 
     elif c:
+        d=st.button("update")
         SP_SHEET = 'Sheet3' 
         worksheet = sh.worksheet(SP_SHEET)
-        add1 = worksheet.update_cell(1,1, "title2")
+        if d:
+            add1 = worksheet.update_cell(1,1, "title2")
         
             
     
