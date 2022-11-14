@@ -49,11 +49,11 @@ if check_password():
         data = worksheet.get_all_values() 
         df = pd.DataFrame(data[1:], columns=data[0])
 
-    keyword= df['keyword'].unique().tolist()
-    mondai = df['問題'].unique().tolist()
-    k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
-    m_select = st.sidebar.selectbox("問題を選択してください", mondai)
-    result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
+        keyword= df['keyword'].unique().tolist()
+        mondai = df['問題'].unique().tolist()
+        k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
+        m_select = st.sidebar.selectbox("問題を選択してください", mondai)
+        result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
 
     if len(result_df) == 0:
         st.write("答えはありません")
