@@ -92,7 +92,7 @@ if check_password():
         x1=len(list)
         x2=x1+1
         st.title(x1)
-        st.metric(value="a"+x2)
+        st.metric(label="#a:",value="a")
         
             
     
