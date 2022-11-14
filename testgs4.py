@@ -90,7 +90,7 @@ if check_password():
         worksheet = sh.worksheet(SP_SHEET)
         list = worksheet.get_all_values()
         st.title(len(list))
-        st.title("a="+(len(list)+1))
+        st.title("a="(len(list)+1))
         
             
     
