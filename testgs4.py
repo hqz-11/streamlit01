@@ -91,8 +91,10 @@ if check_password():
         list = worksheet.get_all_values()
         x1=len(list)
         x2=x1+1
-        title1 = st.text_input(label, value="")
-        title2 = st.text_input(label, value="")
+        title1 = st.text_input(value="")
+        title2 = st.text_input(label="")
+        d=st.button("update")
+        if d:
         worksheet.update_cell(x2, title1, title2)
         
             
