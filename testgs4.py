@@ -56,9 +56,7 @@ if check_password():
             c1
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY)
-    sheet1=st.button("sheet1")
-    sheet3=st.button("sheet3")
-    SP_SHEET = test 
+    SP_SHEET = str.test 
     worksheet = sh.worksheet(SP_SHEET)
     data = worksheet.get_all_values() 
     df = pd.DataFrame(data[1:], columns=data[0])
