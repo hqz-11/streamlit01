@@ -53,60 +53,24 @@ if check_password():
     d=st.button("update")
     if d:
         add1 = worksheet.update_cell(x2,title1,title2)
-    a=st.button("1")
-    b=st.button("2")
-    c=st.button("3")
-    if a:
-        SP_SHEET = 'Sheet1'
-        worksheet = sh.worksheet(SP_SHEET)
-        data = worksheet.get_all_values() 
-        df = pd.DataFrame(data[1:], columns=data[0])
-        keyword= df['keyword'].unique().tolist()
-        mondai = df['問題'].unique().tolist()
-        k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
-        m_select = st.sidebar.selectbox("問題を選択してください", mondai)
-        result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
+    
+    SP_SHEET = 'Sheet1'
+    worksheet = sh.worksheet(SP_SHEET)
+    data = worksheet.get_all_values() 
+    df = pd.DataFrame(data[1:], columns=data[0])
+    keyword= df['keyword'].unique().tolist()
+    mondai = df['問題'].unique().tolist()
+    k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
+    m_select = st.sidebar.selectbox("問題を選択してください", mondai)
+    result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
 
-        if len(result_df) == 0:
-            st.write("答えはありません")
-        else:
-            st.write("答えの例： ")
-            for i in range(len(result_df)):
-                st.write(result_df["答え1"].values[i])
-                st.write(result_df["答え2"].values[i])
-                st.write(result_df["答え3"].values[i]) 
-    elif b:
-        SP_SHEET = 'Sheet3' 
-        worksheet = sh.worksheet(SP_SHEET)
-        data = worksheet.get_all_values() 
-        df = pd.DataFrame(data[1:], columns=data[0])
-
-        keyword= df['keyword'].unique().tolist()
-        mondai = df['問題'].unique().tolist()
-        k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
-        m_select = st.sidebar.selectbox("問題を選択してください", mondai)
-        result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
-
-        if len(result_df) == 0:
-            st.write("答えはありません")
-        else:
-            st.write("答えの例： ")
-            for i in range(len(result_df)):
-                st.write(result_df["答え1"].values[i])
-                st.write(result_df["答え2"].values[i])
-                st.write(result_df["答え3"].values[i]) 
-        return ture
-    elif c:
-        SP_SHEET = 'Sheet3' 
-        worksheet = sh.worksheet(SP_SHEET)
-        list = worksheet.get_all_values()
-        x1=len(list)
-        x2=x1+1
-        title1 = st.text_input("行",1)
-        title2 = st.text_input("内容","内容")
-        d=st.button("update")
-        if d:
-            add1 = worksheet.update_cell(16,1,"title2")
+    if len(result_df) == 0:
+        st.write("答えはありません")
+    else:
+        st.write("答えの例： ")
+        for i in range(len(result_df)):
+            st.write(result_df["答え1"].values[i])
+            st.write(result_df["答え2"].values[i])
         
             
     
