@@ -52,7 +52,7 @@ if check_password():
     title2 = st.text_input("内容","内容")
     d=st.button("update")
     if d:
-        add1 = worksheet.update_cell(16,1,"title2")
+        add1 = worksheet.update_cell(x2,title1,title2)
     a=st.button("1")
     b=st.button("2")
     c=st.button("3")
