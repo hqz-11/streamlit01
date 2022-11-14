@@ -88,8 +88,10 @@ if check_password():
     elif c:
         SP_SHEET = 'Sheet3' 
         worksheet = sh.worksheet(SP_SHEET)
-        list_of_lists = worksheet.get_all_values()
-        st.title(len(list_of_lists))
+        list = worksheet.get_all_values()
+        st.title(len(list))
+        st.title("a="+(len(list)+1))
+        
             
     
     
