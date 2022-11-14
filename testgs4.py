@@ -86,9 +86,10 @@ if check_password():
                 st.write(result_df["答え2"].values[i])
                 st.write(result_df["答え3"].values[i]) 
     elif c:
-        len(worksheet_list)	
         SP_SHEET = 'Sheet3' 
         worksheet = sh.worksheet(SP_SHEET)
-        add1 = worksheet.update_cell(17,1,"田中")      
+        worksheet_list = workbook.worksheets()
+        len(worksheet_list)	
+            
     
     
