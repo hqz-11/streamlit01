@@ -94,7 +94,7 @@ if check_password():
         x2=x1+1
         title1 = st.text_input("行",1)
         title2 = st.text_input("内容","内容")
-        d=st.button("update")
+        
         if d:
             add1 = worksheet.update_cell(x2,title1,title2)
         
