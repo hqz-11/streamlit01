@@ -43,14 +43,11 @@ if check_password():
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY)
     sheet1=st.button("sheet1")
-    sheet1=st.button("sheet1")
     if sheet1:
         SP_SHEET = 'Sheet1' 
-    else:
-        SP_SHEET = 'Sheet3' 
-    worksheet = sh.worksheet(SP_SHEET)
-    data = worksheet.get_all_values() 
-    df = pd.DataFrame(data[1:], columns=data[0])
+        worksheet = sh.worksheet(SP_SHEET)
+        data = worksheet.get_all_values() 
+        df = pd.DataFrame(data[1:], columns=data[0])
 
     keyword= df['keyword'].unique().tolist()
     mondai = df['問題'].unique().tolist()
