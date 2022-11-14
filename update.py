@@ -48,22 +48,19 @@ if check_password():
     list = worksheet.get_all_values()
     x1=len(list)
     x2=x1+1
-    st.title("keyword:1"
-            "問題:2"
-            "答え1:3"
-            "答え2:4"
-            "答え3:5")
-    title1 = st.text_input("keyword","内容")
-    title2 = st.text_input("問題","内容")
-    title3 = st.text_input("答え1","内容")
-    title4 = st.text_input("答え2","内容")
-    title5 = st.text_input("答え3","内容")
+    st.markdown("sheet update")
+    st.title("enterを押してください")
+    title1 = st.text_input("keyword")
+    title2 = st.text_input("問題")
+    title3 = st.text_input("答え1")
+    title4 = st.text_input("答え2")
+    title5 = st.text_input("答え3")
     if st.button("update"):
-        update1 = worksheet.update_cell(x2,5,title1)
-        update2 = worksheet.update_cell(x2,1,title2)
-        update3 = worksheet.update_cell(x2,2,title3)
-        update4 = worksheet.update_cell(x2,3,title4)
-        update5 = worksheet.update_cell(x2,4,title5)
+        update1 = worksheet.update_cell(x2,1,title1)
+        update2 = worksheet.update_cell(x2,2,title2)
+        update3 = worksheet.update_cell(x2,3,title3)
+        update4 = worksheet.update_cell(x2,4,title4)
+        update5 = worksheet.update_cell(x2,5,title5)
        
     
     
