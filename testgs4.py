@@ -91,9 +91,9 @@ if check_password():
         list = worksheet.get_all_values()
         x1=len(list)
         x2=x1+1
-        st.title("# 新しい行は：")
-        st.title(x2)
-        st.metric(label="# a:",value=x2)
+        title1 = st.text_input()
+        title2 = st.text_input()
+        worksheet.update_cell(x2, title1, title2)
         
             
     
