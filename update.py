@@ -48,7 +48,7 @@ if check_password():
     list = worksheet.get_all_values()
     x1=len(list)
     x2=x1+1
-    st.markdown("sheet update")
+    st.markdown("# sheet update")
     st.title("enterを押してください")
     title1 = st.text_input("keyword")
     title2 = st.text_input("問題")
