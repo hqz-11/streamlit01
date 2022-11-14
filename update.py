@@ -53,9 +53,17 @@ if check_password():
             "答え1:3"
             "答え2:4"
             "答え3:5")
-    title1 = st.text_input("行",1)
+    title1 = st.text_input("内容","内容")
     title2 = st.text_input("内容","内容")
+    title3 = st.text_input("内容","内容")
+    title4 = st.text_input("内容","内容")
+    title5 = st.text_input("内容","内容")
     if st.button("update"):
-        add1 = worksheet.update_cell(x2,title1,title2)
+        update1 = worksheet.update_cell(x2,5,title1)
+        update2 = worksheet.update_cell(x2,1,title2)
+        update3 = worksheet.update_cell(x2,2,title3)
+        update4 = worksheet.update_cell(x2,3,title4)
+        update5 = worksheet.update_cell(x2,4,title5)
+       
     
     
