@@ -43,6 +43,7 @@ if check_password():
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY)
     sheet1=st.button("sheet1")
+    sheet3=st.button("sheet3")
     if sheet1:
         SP_SHEET = 'Sheet1' 
         worksheet = sh.worksheet(SP_SHEET)
@@ -62,7 +63,7 @@ if check_password():
                 st.write(result_df["答え1"].values[i])
                 st.write(result_df["答え2"].values[i])
                 st.write(result_df["答え3"].values[i]) 
-     else:
+     else sheet3:
         SP_SHEET = 'Sheet3' 
         worksheet = sh.worksheet(SP_SHEET)
         data = worksheet.get_all_values() 
