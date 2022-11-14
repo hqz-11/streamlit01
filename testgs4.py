@@ -41,6 +41,8 @@ def check_password():
 
 
 if check_password():
+    SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
+    sh = gc.open_by_key(SP_SHEET_KEY) 
     SP_SHEET = 'Sheet1'
     worksheet = sh.worksheet(SP_SHEET)
     data = worksheet.get_all_values() 
