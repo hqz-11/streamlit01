@@ -60,6 +60,10 @@ if check_password():
         for i in range(len(result_df)):
             st.write(result_df["答え1"].values[i])
             st.write(result_df["答え2"].values[i])
+            
+            
+            
+    st.title("# sheet update","https://hqz-11-streamlit01-update-hztko3.streamlit.app/")
     st.header('https://www.youtube.com/')
         
             
