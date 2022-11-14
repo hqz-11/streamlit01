@@ -97,7 +97,7 @@ if check_password():
         if d:
             SP_SHEET = 'Sheet3' 
             worksheet = sh.worksheet(SP_SHEET)
-            add1 = worksheet.update_cell(16, 1, "title2")
+            add1 = worksheet.update_cell(1,1, "title2")
         
             
     
