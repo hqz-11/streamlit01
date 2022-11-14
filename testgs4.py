@@ -88,7 +88,8 @@ if check_password():
     elif c:
         SP_SHEET = 'Sheet3' 
         worksheet = sh.worksheet(SP_SHEET)
-        len(worksheet)	
+        list_of_lists = worksheet.get_all_values()
+        print(len(list_of_lists))
             
     
     
