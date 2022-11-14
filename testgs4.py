@@ -95,6 +95,7 @@ if check_password():
                 st.write(result_df["答え1"].values[i])
                 st.write(result_df["答え2"].values[i])
                 st.write(result_df["答え3"].values[i]) 
+        return ture
     elif c:
         SP_SHEET = 'Sheet3' 
         worksheet = sh.worksheet(SP_SHEET)
