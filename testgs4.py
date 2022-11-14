@@ -89,7 +89,7 @@ if check_password():
         SP_SHEET = 'Sheet3' 
         worksheet = sh.worksheet(SP_SHEET)
         list_of_lists = worksheet.get_all_values()
-        print(len(list_of_lists))
+        st.title(len(list_of_lists))
             
     
     
