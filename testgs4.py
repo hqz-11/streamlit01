@@ -95,7 +95,7 @@ if check_password():
         title2 = st.text_input(label="")
         d=st.button("update")
         if d:
-        worksheet.update_cell(x2, title1, title2)
+            worksheet.update_cell(x2, title1, title2)
         
             
     
