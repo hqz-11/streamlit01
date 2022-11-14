@@ -41,38 +41,53 @@ def check_password():
 
 
 if check_password():
-    def test():
-        a=st.button("1")
-        b=st.button("2")
-        c=st.button("3")
-        a1="Sheet1"
-        b1="Sheet2"
-        c1="Sheet3"
-        if a:
-            return 'Sheet1'
-        elif b:
-            return 'Sheet2'
-        elif c:
-            return 'Sheet3'
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY)
-    SP_SHEET = test 
-    worksheet = sh.worksheet(SP_SHEET)
-    data = worksheet.get_all_values() 
-    df = pd.DataFrame(data[1:], columns=data[0])
+    a=st.button("1")
+    b=st.button("2")
+    c=st.button("3")
+    if a:
+        SP_SHEET = 'Sheet1'
+        worksheet = sh.worksheet(SP_SHEET)
+        data = worksheet.get_all_values() 
+        df = pd.DataFrame(data[1:], columns=data[0])
+        keyword= df['keyword'].unique().tolist()
+        mondai = df['問題'].unique().tolist()
+        k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
+        m_select = st.sidebar.selectbox("問題を選択してください", mondai)
+        result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
 
-    keyword= df['keyword'].unique().tolist()
-    mondai = df['問題'].unique().tolist()
-    k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
-    m_select = st.sidebar.selectbox("問題を選択してください", mondai)
-    result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
+        if len(result_df) == 0:
+            st.write("答えはありません")
+        else:
+            st.write("答えの例： ")
+            for i in range(len(result_df)):
+                st.write(result_df["答え1"].values[i])
+                st.write(result_df["答え2"].values[i])
+                st.write(result_df["答え3"].values[i]) 
+    elif b:
+        SP_SHEET = 'Sheet3' 
+        worksheet = sh.worksheet(SP_SHEET)
+        data = worksheet.get_all_values() 
+        df = pd.DataFrame(data[1:], columns=data[0])
 
-    if len(result_df) == 0:
-        st.write("答えはありません")
-    else:
-        st.write("答えの例： ")
-        for i in range(len(result_df)):
-            st.write(result_df["答え1"].values[i])
-            st.write(result_df["答え2"].values[i])
-            st.write(result_df["答え3"].values[i]) 
-       
+        keyword= df['keyword'].unique().tolist()
+        mondai = df['問題'].unique().tolist()
+        k_select = st.sidebar.selectbox("keywordを選択してください", keyword)
+        m_select = st.sidebar.selectbox("問題を選択してください", mondai)
+        result_df = df[(df['keyword'] == k_select) & (df['問題'] == m_select)]
+
+        if len(result_df) == 0:
+            st.write("答えはありません")
+        else:
+            st.write("答えの例： ")
+            for i in range(len(result_df)):
+                st.write(result_df["答え1"].values[i])
+                st.write(result_df["答え2"].values[i])
+                st.write(result_df["答え3"].values[i]) 
+    elif c:
+        SP_SHEET = 'Sheet3' 
+        worksheet = sh.worksheet(SP_SHEET)
+        add1 = worksheet.update_cell(1,1,"田中")      
+    
+    
