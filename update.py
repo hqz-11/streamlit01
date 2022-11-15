@@ -89,7 +89,7 @@ if check_password():
     title10 = st.text_input("消したい列")
     
     if st.button("データ消し"):
-        update6 = worksheet.delete_cells(title9,title10)
+        update7 = worksheet.values_clear(title9,title10)
         st.write("successful")
     
         
