@@ -83,6 +83,15 @@ if check_password():
     if st.button("データ更新"):
         update6 = worksheet.update_cell(title6,title7,title8)
         st.write("successful")
+     
+    st.markdown("# データ消し")
+    title8 = st.text_input("行")
+    title9 = st.text_input("列")
+    
+    if st.button("データ更新"):
+        update6 = worksheet.delete_cells(title8,title9)
+        st.write("successful")
+    
         
        
     
