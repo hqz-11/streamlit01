@@ -2,6 +2,7 @@ import streamlit as st
 from google.oauth2 import service_account
 import gspread
 import pandas as pd
+import time
 
 scopes = [ 'https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive'
 ]
