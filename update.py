@@ -52,8 +52,7 @@ if check_password():
     if st.button("sheet check"):
         st.dataframe(worksheet.get_all_values())
         
-    st.markdown("# sheet 追加"
-            "enterを押してください")
+    st.markdown("# cell追加")
     x1=len(worksheet.get_all_values())
     x2=x1+1
     title1 = st.text_input("keyword")
