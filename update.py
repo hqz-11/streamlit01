@@ -60,6 +60,9 @@ if check_password():
     title3 = st.text_input("答え1")
     title4 = st.text_input("答え2")
     title5 = st.text_input("答え3")
+    title6 = st.text_input("行")
+    title7 = st.text_input("列")
+    title8 = st.tex_input("新し内容")
     
     if st.button("追加"):
         update1 = worksheet.update_cell(x2,1,title1)
@@ -67,20 +70,18 @@ if check_password():
         update3 = worksheet.update_cell(x2,3,title3)
         update4 = worksheet.update_cell(x2,4,title4)
         update5 = worksheet.update_cell(x2,5,title5)
-        st.write("successful update",
-                "LAST DATE IS")
+    　　st.write("successful","LAST DATE IS")
         ik = worksheet.row_values(x2)
         st.title(ik)
         
     if st.button("追加消し"):
         cancel = worksheet.delete_rows(x1)
-        st.write("successful cancel")
+        st.write("successful")
         
     if st.button("データ更新"):
-        title6 = st.text_input("行")
-        title7 = st.text_input("列")
-        title8 = st.tex_input("新し内容")
         update6 = worksheet.update_cell(title6,title7,title8)
+        st.write("successful")
+        
        
     
     
