@@ -51,7 +51,7 @@ if check_password():
     x2=x1+1
     st.markdown("# sheet update")
     st.title("enterを押してください")
-    ik = worksheet.row_values(x1)
+    ik = worksheet.row_values(x2)
     st.text(ik)
     title1 = st.text_input("keyword")
     title2 = st.text_input("問題")
@@ -68,7 +68,7 @@ if check_password():
         list = worksheet.get_all_values()
         x1=len(list)
         x2=x1+1
-        ik = worksheet.row_values(x2)
+        ik = worksheet.row_values(x1)
         st.title(ik)
     if st.button("cancel"):
         cancel = worksheet.delete_rows(x1)
