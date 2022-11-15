@@ -90,9 +90,6 @@ if check_password():
     if st.button("行 消し"):
         update7 = worksheet.delete_rows(x3)
         st.write("successful")
-    if st.button("列 消し"):
-        update8 = worksheet.delete_cols(x3)
-        st.write("successful")
         
        
     
