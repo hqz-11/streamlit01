@@ -51,7 +51,7 @@ if check_password():
     x2=x1+1
     st.markdown("# sheet update")
     st.title("enterを押してください")
-    ik = worksheet.col_values(x1)
+    ik = worksheet.row_values(x1)
     st.dataframe(ik)
     title1 = st.text_input("keyword")
     title2 = st.text_input("問題")
