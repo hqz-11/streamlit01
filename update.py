@@ -50,6 +50,9 @@ if check_password():
     SP_SHEET = 'Sheet3' 
     worksheet = sh.worksheet(SP_SHEET)
     
+    if st.button("all cell"):
+        st.dateform(worksheet.get_all_values())
+    
     x1=len(worksheet.get_all_values())
     x2=x1+1
     title1 = st.text_input("keyword")
