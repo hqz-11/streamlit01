@@ -65,10 +65,8 @@ if check_password():
         update4 = worksheet.update_cell(x2,4,title4)
         update5 = worksheet.update_cell(x2,5,title5)
         st.write("successful update")
-        list = worksheet.get_all_values()
-        x1=len(list)
         ik = worksheet.row_values(x1)
-        st.write("date",ik)
+        st.title("date",ik)
     if st.button("cancel"):
         cancel = worksheet.delete_rows(x1)
         st.write("successful cancel")
