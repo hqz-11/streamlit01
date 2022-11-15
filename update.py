@@ -51,7 +51,7 @@ if check_password():
     worksheet = sh.worksheet(SP_SHEET)
     
     if st.button("all cell"):
-        st.dateframe(worksheet.get_all_values())
+        st.dataframe(worksheet.get_all_values())
     
     x1=len(worksheet.get_all_values())
     x2=x1+1
