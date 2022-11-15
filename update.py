@@ -88,10 +88,12 @@ if check_password():
     title9 = st.text_input("消したい行")
     title10 = st.text_input("消したい列")
     
-    if st.button("データ消し"):
-        update7 = worksheet.values_clear(title9,title10)
+    if st.button("行 消し"):
+        update7 = worksheet.delete_rows(title9)
         st.write("successful")
-    
+    if st.button("列 消し"):
+        update7 = worksheet.delete_cols(title9)
+        st.write("successful")
         
        
     
