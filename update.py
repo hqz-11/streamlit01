@@ -55,6 +55,7 @@ if check_password():
     title3 = st.text_input("答え1")
     title4 = st.text_input("答え2")
     title5 = st.text_input("答え3")
+    cancel = worksheet.delete_rows(x2)
     if st.button("update"):
         update1 = worksheet.update_cell(x2,1,title1)
         update2 = worksheet.update_cell(x2,2,title2)
