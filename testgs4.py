@@ -44,7 +44,7 @@ if check_password():
     st.title("# keywordsearch")
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY) 
-    SP_SHEET = 'Sheet1'
+    SP_SHEET = 'Sheet3'
     worksheet = sh.worksheet(SP_SHEET)
     data = worksheet.get_all_values() 
     df = pd.DataFrame(data[1:], columns=data[0])
