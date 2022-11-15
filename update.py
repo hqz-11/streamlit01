@@ -66,7 +66,7 @@ if check_password():
         update5 = worksheet.update_cell(x2,5,title5)
         st.write("successful update")
         ik = worksheet.row_values(x1)
-        break
+    break
     if st.button("cancel"):
         cancel = worksheet.delete_rows(x1)
         st.write("successful cancel")
