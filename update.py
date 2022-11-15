@@ -43,7 +43,6 @@ def check_password():
 
 if check_password():
     st.markdown("# sheet update")
-    st.title("enterを押してください")
     
     SP_SHEET_KEY = st.secrets.SP_SHEET_KEY.key 
     sh = gc.open_by_key(SP_SHEET_KEY)      
@@ -52,7 +51,8 @@ if check_password():
     
     if st.button("sheet check"):
         st.dataframe(worksheet.get_all_values())
-    
+        
+    st.title("enterを押してください")
     x1=len(worksheet.get_all_values())
     x2=x1+1
     title1 = st.text_input("keyword")
