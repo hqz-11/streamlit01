@@ -51,8 +51,9 @@ if check_password():
     x2=x1+1
     st.markdown("# sheet update")
     st.title("enterを押してください")
-    with ik = worksheet.row_values(x1):
-        st.text(ik)
+    ik = worksheet.row_values(x1)
+    with st.text(ik):
+        time.sleep(3)
     title1 = st.text_input("keyword")
     title2 = st.text_input("問題")
     title3 = st.text_input("答え1")
