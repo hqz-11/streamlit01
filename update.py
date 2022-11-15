@@ -93,7 +93,7 @@ if check_password():
         update7 = worksheet.delete_rows(x3)
         st.write("successful")
     if st.button("列 消し"):
-        update7 = worksheet.delete_cols(x4)
+        update8 = worksheet.delete_cols(x4)
         st.write("successful")
         
        
