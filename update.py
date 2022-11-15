@@ -50,8 +50,8 @@ if check_password():
     SP_SHEET = 'Sheet3' 
     worksheet = sh.worksheet(SP_SHEET)
     
-    if st.button("all cell"):
-        st.dataframe(worksheet.get_all_values())
+    if st.button("sheet check"):
+        st.write(worksheet.get_all_values())
     
     x1=len(worksheet.get_all_values())
     x2=x1+1
