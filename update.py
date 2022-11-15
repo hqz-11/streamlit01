@@ -52,7 +52,7 @@ if check_password():
     st.markdown("# sheet update")
     st.title("enterを押してください")
     ik = worksheet.col_values(x1)
-    st.write(ik)
+    st.title(ik)
     title1 = st.text_input("keyword")
     title2 = st.text_input("問題")
     title3 = st.text_input("答え1")
