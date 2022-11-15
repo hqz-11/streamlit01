@@ -86,7 +86,7 @@ if check_password():
      
     st.markdown("# データ消し")
     title9 = st.text_input("消したい行")
-    title10 = st.number_input("消したい列")
+    title10 = st.text_input("消したい列")
     x3 = int(title9)
     x4 = int(title10)
     if st.button("行 消し"):
