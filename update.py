@@ -52,7 +52,7 @@ if check_password():
     if st.button("sheet check"):
         st.dataframe(worksheet.get_all_values())
         
-    st.markdown("sheet 追加"
+    st.markdown("# sheet 追加"
             "enterを押してください")
     x1=len(worksheet.get_all_values())
     x2=x1+1
@@ -68,7 +68,7 @@ if check_password():
         update3 = worksheet.update_cell(x2,3,title3)
         update4 = worksheet.update_cell(x2,4,title4)
         update5 = worksheet.update_cell(x2,5,title5)
-        st.write("successful","LAST DATE IS")
+        st.write("successful","LAST DATA IS")
         ik = worksheet.row_values(x2)
         st.title(ik)
         
@@ -76,7 +76,7 @@ if check_password():
         cancel = worksheet.delete_rows(x1)
         st.write("successful")
         
-    st.markdown("データ更新")
+    st.markdown("# データ更新")
     title6 = st.text_input("行")
     title7 = st.text_input("列")
     title8 = st.text_input("新し内容")
