@@ -50,11 +50,8 @@ if check_password():
     SP_SHEET = 'Sheet3' 
     worksheet = sh.worksheet(SP_SHEET)
     
-    #list = worksheet.get_all_values()
     x1=len(worksheet.get_all_values())
     x2=x1+1
-    ik = worksheet.row_values(x1)
-    st.text(ik)
     title1 = st.text_input("keyword")
     title2 = st.text_input("問題")
     title3 = st.text_input("答え1")
@@ -67,10 +64,9 @@ if check_password():
         update3 = worksheet.update_cell(x2,3,title3)
         update4 = worksheet.update_cell(x2,4,title4)
         update5 = worksheet.update_cell(x2,5,title5)
-        st.write("successful update")
-        #list = worksheet.get_all_values()
-        x1=len(worksheet.get_all_values())
-        ik = worksheet.row_values(x1)
+        st.write("successful update"
+                "LAST DATE IS")
+        ik = worksheet.row_values(x2)
         st.title(ik)
         
     if st.button("cancel"):
