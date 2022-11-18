@@ -85,10 +85,9 @@ if check_password():
         st.write("successful")
      
     st.markdown("# データ消し")
-    title9 = st.text_input("消したい行あるいは列")
-    x3 = int(title9)
-    if st.button("行 消し"):
-        update7 = worksheet.delete_rows(x3)
+    title9 = st.number_input("消したい行あるいは列")
+    if st.button("消し"):
+        update7 = worksheet.delete_rows(title9)
         st.write("successful")
         
        
