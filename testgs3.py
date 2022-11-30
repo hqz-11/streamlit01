@@ -31,9 +31,9 @@ def check_password():
     elif not st.session_state["password_correct"]:
         # Password not correct, show input + error.
         st.text_input(
-            "Password", type="password", on_change=password_entered, key="password"
+            "パスワードを入れてください", type="password", on_change=password_entered, key="password"
         )
-        st.error("😕 Password incorrect")
+        st.error("パスワードが違う")
         return False
     else:
         # Password correct.
