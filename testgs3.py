@@ -60,6 +60,9 @@ if check_password():
         st.write("答えの例： ")
         for i in range(len(result_df)):
             st.write("例１:",result_df["チャットボットの回答（高橋様修正後）"].values[i])
+       
+    st.title("# SHEET UPDATE URL")
+    st.header('https://hqz-11-streamlit01-update-hztko3.streamlit.app/')
     
 
        
