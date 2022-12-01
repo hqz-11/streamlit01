@@ -58,9 +58,8 @@ if check_password():
     if len(result_df) == 0:
         st.write("答えはありません")
     else:
-        st.write("答えの例： ")
         for i in range(len(result_df)):
-            st.write(result_df["回答"].values[i])
+            st.write("以前の答えの例： ",result_df["回答"].values[i])
             st.write("性別：",result_df["性別"].values[i])
             st.write("ファイル名：",result_df["ファイル名"].values[i])
 
