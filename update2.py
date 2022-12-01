@@ -66,7 +66,7 @@ if check_password():
         update2 = worksheet.update_cell(x2,2,title2)#update cell(質問)
         update3 = worksheet.update_cell(x2,3,title3)#update cell(回答)
         update4 = worksheet.update_cell(x2,5,title4)#update cell(性別)
-        update5 = worksheet.update_cell(x2,6,title5)#update cell(ファイル名)
+        update5 = worksheet.update_cell(x2,7,title5)#update cell(ファイル名)
         st.write("successful","LAST DATA IS")
         ik = worksheet.row_values(x2)
         st.title(ik)
