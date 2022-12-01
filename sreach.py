@@ -60,9 +60,9 @@ if check_password():
     else:
         st.write("答えの例： ")
         for i in range(len(result_df)):
-            st.write("例:",result_df["回答"].values[i])
-            st.write(result_df["性別"].values[i])
-            st.write(result_df["ファイル名"].values[i])
+            st.write(result_df["回答"].values[i])
+            st.write("性別："result_df["性別"].values[i])
+            st.write("ファイル名："result_df["ファイル名"].values[i])
 
     st.markdown("# SHEET UPDATE URL :")
     st.header('https://hqz-11-streamlit01-update-hztko3.streamlit.app/')
