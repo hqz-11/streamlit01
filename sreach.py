@@ -50,7 +50,7 @@ if check_password():
     df = pd.DataFrame(data[1:], columns=data[0])
     st.markdown("# keywordsraech")
     kw= df['キーワード'].unique().tolist()#この列の各カテゴリの名前を返し、リストに変換します
-    stm = df[df['キーワード'] & df['質問']].unique().tolist()#この列の各カテゴリの名前を返し、リストに変換します
+    stm = kw['質問'].unique().tolist()#この列の各カテゴリの名前を返し、リストに変換します
     k_select = st.sidebar.selectbox("キーワードを選択してください", kw)#選択ボックスとラジオボタンを追加する
     s_select = st.sidebar.selectbox("質問を選択してください", stm)#選択ボックスとラジオボタンを追加する
     result_df = df[(df['キーワード'] == k_select) & (df['質問'] == s_select)]
