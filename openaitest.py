@@ -3,7 +3,7 @@ import openai
 import os
 
 # Set the API key
-openai.api_key = 'pd'#鍵はopenaiの会員登録で入手する必要があります。
+openai.api_key = st.secrets["pd"]#鍵はopenaiの会員登録で入手する必要があります。
 
 # Create a text input widget
 question = st.text_input("Ask a question:")
